@@ -13,6 +13,8 @@ const Navbar = () => {
         const menulink = document.querySelector('.navbar__menu');
         menu.classList.toggle('is-active');     
         menulink.classList.toggle('active');   
+
+        
     }
     return (
         <nav className="navbar">
