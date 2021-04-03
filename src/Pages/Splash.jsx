@@ -7,7 +7,6 @@ class Splash extends Component {
   render() { 
     return ( 
       <React.Fragment>
-        <Navbar />
         <Home />
       </React.Fragment>
       );
