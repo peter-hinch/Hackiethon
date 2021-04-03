@@ -9,7 +9,6 @@ console.log(menu);
 
 const Navbar = () => {
     return (
-        
         <nav className="navbar">
         <div className="navbar__container">
             <a id="navbar__logo" href="index.html"><i className="fas fa-laptop-code"></i>I Am Here</a>
@@ -20,25 +19,19 @@ const Navbar = () => {
             </div>
             <ul className="navbar__menu">
                 <li className="navbar__item">
-                    <a href="index.html" className="navbar__links">Home</a>
+                    <a href="./home" className="navbar__links">Home</a>
                 </li>
                 <li className="navbar__item">
-                    <a href="tech.html" class="navbar__links">Employee</a>
+                    <a href="./" class="navbar__links">Employee</a>
                 </li>
                 <li className="navbar__item">
-                        <a href="product.html" className="navbar__links">Employer
-                    </a>
+                        <a href="./" className="navbar__links">Employer</a>
                 </li>
                 <li className="navbar__btn">
-                    <a href="signup.html" className="button" id = "signup__btn">Sign In</a>
-                </li>
-                <li>
-                    <a href="/" id="search__logo"><i className="fas fa-search"></i> </a>
+                    <a href="./SignUp" className="button" id = "signup__btn">Sign In</a>
                 </li>
             </ul>
-            
-            </div>
-            
+        </div>
     </nav>
     )
 }
