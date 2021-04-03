@@ -8,11 +8,19 @@ console.log(menu);
 
 
 const Navbar = () => {
+    function handleClick(e)
+    {   const menu = document.querySelector('#mobile-menu'); 
+        const menulink = document.querySelector('.navbar__menu');
+        menu.classList.toggle('is-active');     
+        menulink.classList.toggle('active');   
+
+        
+    }
     return (
         <nav className="navbar">
         <div className="navbar__container">
             <a id="navbar__logo" href="index.html"><i className="fas fa-laptop-code"></i>I Am Here</a>
-                <div  className="navbar__toggle" id="mobile-menu">
+                <div  className="navbar__toggle" id="mobile-menu"onClick={handleClick}>
                 <span className="bar"></span> 
                 <span className="bar"></span>
                 <span className="bar"></span>
