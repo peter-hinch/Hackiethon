@@ -108,74 +108,25 @@ export default class SliderForm extends Component {
       />
     }
     console.log("arrived");
-    return ( <
-      div id = 'main__body' >
-      <
-      div onSubmit = {
-        this.handleSubmit
-      }
-      id = 'sliderform' >
-      <
-      div id = "sliderContainer" >
-      <
-      label >
-      Satisfaction: < br / >
-      <
-      input id = "satisfaction"
-      name = 'satisfaction'
-      type = "range"
-      value = {
-        this.state.value
-      }
-      onChange = {
-        this.handleChange
-      }
-      /> < /
-      label >
-
-      <
-      label >
-      <
-      br / > Stress levels: < br / >
-      <
-      input id = "stress"
-      name = 'stress'
-      type = "range"
-      value = {
-        this.state.value
-      }
-      onChange = {
-        this.handleChange
-      }
-      /> < /
-      label >
-
-      <
-      label >
-      <
-      br / > Physical Health: < br / >
-      <
-      input id = "health"
-      name = 'health'
-      type = "range"
-      value = {
-        this.state.value
-      }
-      onChange = {
-        this.handleChange
-      }
-      /> < /
-      label >
-
-      <
-      button onClick = {
-        this.handleSubmit
-      }
-      id = "submitButton"
-      className = "navbar__links" > Next < /button> < /
-      div > <
-      /div> < /
-      div >
+    return (
+      <div id='main__body'>
+        <div onSubmit={this.handleSubmit} id='sliderform'>
+          <div id="sliderContainer">
+            <label>Satisfaction:<br/>
+              <input id = "satisfaction" name='satisfaction' type="range" value={this.state.value} onChange={this.handleChange} />
+            </label>
+            <label>
+              <br/>Stress levels:<br/>
+              <input id="stress" name='stress' type="range" value={this.state.value} onChange={this.handleChange} />
+            </label>
+            <label>
+              <br/>Physical Health:<br/>
+              <input id="health" name='health' type="range" value={this.state.value} onChange={this.handleChange} />
+            </label>
+            <button onClick={this.handleSubmit} id="submitButton" className="navbar__links">Next</button>
+          </div>
+        </div>
+      </div>
     );
   }
 }
