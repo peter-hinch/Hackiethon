@@ -4,17 +4,21 @@ import {getStrings} from '../Components/EvaluatePage/resultStrings';
 
 class EvaluatePage extends Component {
     
-    state = {
-        strings: getStrings(),
+    constructor(props) {
+        super(props);
+        this.state = {
+            strings: getStrings(),
 
-        satRes: 20,
-        strRes: 60,
-        phyRes: 100,
+            satRes: 20,
+            strRes: 60,
+            phyRes: 100,
 
-        autRes: "yes",
-        conRes: "sometimes",
-        grwRes: "no",
-    };
+            autRes: "yes",
+            conRes: "sometimes",
+            grwRes: "no",
+        };
+    }
+        
 
     callResultByInt(index, variable) {
         var temp = index * 8;

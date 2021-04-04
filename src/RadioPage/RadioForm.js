@@ -1,5 +1,13 @@
 import React, { Component } from 'react';
+// import Redirect from 'react-router-dom';
 import './radioform.css';
+import {
+  Redirect
+} from 'react-router-dom';
+import {
+  HashRouter,
+  NavLink
+} from "react-router-dom";
 
 // const stressSlider = document.getElementById('stress');
 // const satisfactionSlider = document.getElementById('satisfaction');
@@ -14,8 +22,8 @@ export default class RadioForm extends Component {
     this.state = {
       user: {
         name: {
-          lastname: this.props.location.state.user.lastname,
-          firstname: this.props.location.state.user.firstname
+          lastname: 'this.props.location.state.user.name.lastname',
+          firstname: 'this.props.location.state.user.name.firstname',
         },
         sliders: {
           satisfaction: 50,
@@ -58,9 +66,9 @@ export default class RadioForm extends Component {
   }
 
 
-
+// Y-e-s-e-t-i-m-e-s
   setRadio(event) {
-    this.setState( (prevState) => ({...prevState.radios[event.target.name] = event.target.value}));
+    this.setState( (prevState) => ({...prevState.user.radios[event.target.name] = event.target.value}));
   }
 
   // setConnection(event) {
@@ -76,13 +84,42 @@ export default class RadioForm extends Component {
     // alert(`Satisfaction: ${this.state.satisfaction}.
     // Growth: ${this.state.growth}
     // Stress levels: ${this.state.stress}`);
-
+    this.setState({
+      redirect: true
+    });
     event.preventDefault();
   }
 
   render() {
   
-    return (
+      if (this.state.redirect) {
+        // console.log(JSON.stringify({...this.state}));
+        return (
+        <Redirect to = {
+          {
+            pathname: '/evaluate',
+            user: {
+              name: {
+                lastname: this.state.user.name.lastname,
+                firstname: this.state.user.name.firstname
+              },
+              sliders: {
+                satisfaction: this.state.user.sliders.satisfaction,
+                stress: this.state.user.sliders.stress,
+                health: this.state.user.sliders.health
+              },
+              radios: {
+                autonomy: this.state.user.radios.autonomy,
+                growth: this.state.user.radios.growth,
+                connection: this.state.user.radios.connection
+              },
+              redirect: false
+            }
+          
+          }}
+        />)
+      }
+      return (
       <form onSubmit={this.handleSubmit} id = 'radioform'>
         <div className="row">
           <div></div>

@@ -1,8 +1,11 @@
 import React from 'react';
 import './EvaluatorStyle.css';
 
-function Evaluator(props) {
 
+
+
+function Evaluator(props) {
+    
     return (
         <div id="main_evaluate_body">
             <div id="eval_container1">
