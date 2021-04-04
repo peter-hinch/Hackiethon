@@ -12,13 +12,13 @@ import RadioForm from './RadioPage/RadioForm';
 import EvaluatePage from './Pages/EvaluatePage';
 
 let state = {
-  email: "",
-  password: "",
-  firstname: "",
-  lastname: "",
-  success: false,
-  login: false,
-  uid: null
+  // email: "",
+  // password: "",
+  // firstname: "",
+  // lastname: "",
+  // success: false,
+  // login: false,
+  // uid: null
 }
 
 function withProps(Component, props) {
@@ -31,11 +31,6 @@ ReactDOM.render(
   <React.StrictMode>
     <Navbar />
     <HashRouter>
-      <Route exact path='/' component={Splash} />
-      <Route exact path='/RadioForm' component={RadioForm} />
-      <Route exact path='/evaluate' component={EvaluatePage} />
-      <Route exact path='/signup' component={SignUp} />
-      <Route exact path='/login' component={LogIn} />
       <Route exact path='/' component={withProps(Splash, { ...state })} />
       <Route exact path='/home' component={withProps(Splash, { ...state })} />
       <Route exact path='/evaluate' component={withProps(EvaluatePage, { ...state })} />
