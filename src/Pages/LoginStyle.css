@@ -1,4 +1,4 @@
-#main__signup_con {
+#main__login_con {
   display: grid;
   grid-template-columns: 1fr 1fr;
   padding-top: 160px;
@@ -10,17 +10,19 @@
   background-color: #f9f3de;
   color: rgba(87, 87, 87, 0.548);
 }
-#sign_up_title {
+#login_title {
   margin-bottom: 15px;
 }
-#signup__img {
+#login__img {
   height: 80%;
   width: 80%;
+  padding-bottom: 100px;
 }
-#signin_form {
-  padding-right: 200px;
+#login_form {
+  padding-left: 200px;
+  padding-top: 50px;
 }
-#signin_form input[type="text"],
+#login_form input[type="text"],
 [type="password"] {
   padding: 8px;
   width: 250px;
@@ -28,13 +30,14 @@
   border-radius: 3px;
   margin-bottom: 10px;
 }
-#email {
+#email1 {
   margin-left: 42px;
+  padding: 10px;
 }
 #password {
   margin-left: 10px;
 }
-#signin_submit {
+#login_submit {
   color: #f6fff0 !important;
   width: 200px;
   margin: auto;
@@ -55,26 +58,26 @@
   font-family: "Comfortaa", sans-serif;
   font-weight: bold;
 }
-#signin_submit:hover {
+#login_submit:hover {
   color: white !important;
   background: #7adaf6;
 }
 @media screen and (max-width: 768px) {
-  #main__signup_con {
+  #main__login_con {
     display: grid;
     grid-template-columns: auto;
     padding-top: 10px;
     width: 100%;
     height: 100vh;
   }
-  #signin_form {
+  #login_form {
     text-align: center;
     padding-top: 0px;
     padding-right: 0px;
     margin-top: 0px;
     grid-row-start: 1;
   }
-  #signup__img {
+  #login__img {
     width: 60%;
     height: 60%;
     align-items: center;
