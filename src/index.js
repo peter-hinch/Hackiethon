@@ -1,14 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
 import reportWebVitals from './reportWebVitals';
 
 import { Route, HashRouter } from "react-router-dom";
 import Navbar from './Components/Navbar';
 import Splash from './Pages/Splash';
+import Final from '.Pages/Final'
 import SignUp from './Pages/SignUp';
 import LogIn from './Pages/LogIn';
 import SliderForm from './SliderPage/SliderForm';
+import RadioForm from './RadioPage/RadioForm'
 import EvaluatePage from './Pages/EvaluatePage';
 
 let state = {
@@ -31,11 +32,12 @@ ReactDOM.render(
   <React.StrictMode>
     <Navbar />
     <HashRouter>
-      <Route exact path='/' component={withProps(Splash, { ...state })} />
+      <Route exact path='/' component={withProps(Final, { ...state })} />
       <Route exact path='/home' component={withProps(SignUp, { ...state })} />
       <Route exact path='/evaluate' component={withProps(EvaluatePage, { ...state })} />
       <Route exact path='/signup' component={withProps(SignUp, { ...state })} />
       <Route exact path='/SliderForm' component={withProps(SliderForm, { ...state })} />
+      <Route exact path='/RadioForm' component={withProps(RadioForm, { ...state })} />
       <Route exact path='/login' component={withProps(LogIn, { ...state })} />
     </HashRouter>
   </React.StrictMode>,
