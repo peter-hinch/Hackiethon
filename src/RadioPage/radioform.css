@@ -1,62 +1,66 @@
+:root {
+  
+  --border: black;
+  --fill: pink;
+  --hoverColour: powderblue;
+  --checkedColour: lightgreen;
+
+  --autonomyFill: var(--fill);
+  --autonomyBorder: var(--border);
+  --autonomyHover: var(--hoverColour);
+  --autonomyHover: var(--hoverColour);
+  --autonomyChecked: var(--checkedColour);
+
+  --connectionFill: var(--fill);
+  --connectionBorder: var(--border);
+  --connectionHover: var(--hoverColour);
+  --connectionChecked: var(--checkedColour);
+
+  --growthFill: var(--fill);
+  --growthBorder: var(--border);
+  --growthHover: var(--hoverColour);
+  --growthChecked: var(--checkedColour);
+}
+
+
 input[type="radio"] {
     display: none;
 }
 
-#heading-autonomy {
-    grid-area: heading;
-    /* background-color: red; */
-}
-
-#heading-autonomy {
-    grid-area: heading;
-    /* background-color: red; */
-}
-
-#heading-autonomy {
-    grid-area: heading;
-    /* background-color: red; */
+*, * * {
+  user-select: none;
 }
 
 .row {
     display: grid;
-    grid-template-rows: 4fr 1fr;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-areas: 
-        "headingA headingC headingH"
-        "columnA columnC columnH"
-        "columnA columnC columnH"
-        "columnA columnC columnH"
-        "submit submit submit";
-        
+    grid-template-columns: 1fr 200px 200px 200px 1fr;
     justify-content: center;
-    align-items: center;
+    align-items: center;  
 }
-
-
 
 .column {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    justify-items: center;
+    text-align: center;
+    grid-template-rows: 25px 100px 100px 100px;
+    /* height: 100px; */
 }
-
 
 span {
     margin: 10px;
     margin-left: 10px;
-    
 }
 
-
-.text {
-  pointer-events: none;
+label {
+  position: relative;
+  display: flex;
 }
 
 label.autonomy {
     cursor:pointer;
     color: #555;
     display: grid;
-    /* grid-template-areas: "label1 radio1"; */
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     text-align: end;
     font-size: 30px;
     grid-template-rows: 1fr;
@@ -70,15 +74,13 @@ label.connection {
     cursor:pointer;
     color: #555;
     display: grid;
-    /* grid-template-areas: "label1 radio1"; */
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     text-align: end;
     font-size: 30px;
     grid-template-rows: 1fr;
     justify-content: center;
     align-items: center;
-    align-content: center;
-                         
+    align-content: center;                    
   }
 
   label.growth {
@@ -86,86 +88,135 @@ label.connection {
     color: #555;
     display: grid;
     /* grid-template-areas: "label1 radio1"; */
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     text-align: end;
     font-size: 30px;
     grid-template-rows: 1fr;
     justify-content: center;
     align-items: center;
-    align-content: center;
-                         
+    align-content: center;       
+  }
+
+  form {
+    display: grid;
+    grid-template-rows: 250px 100px;
+    justify-items: center;
+    margin-top: 50px;
   }
 
 
-input[type="radio"] + label span {
+.text {
+  position: absolute;
+  padding: 43px;
+  font-size: 1.1rem;
+  user-select: none;
+}
+
+.textLong {
+  position: absolute;
+  padding: 6px;
+  font-size: 1.1rem;
+}
+
+/* // Controls general styling. */
+span.shape {
     display: inline-block;
     vertical-align: middle;
-  width: 100px;
-  height: 100px;
-    border: 3px solid #ff0000;
+  width: 115px;
+  height: 70px;
+    border: 3px solid var(--border);
     border-radius: 10px;
-    background-color: #ffffff;
+    background-color: var(--fill);
     text-align: center;
 }
 
-input[type="radio"][disabled] + label span {
-  background-color: #ececec;
-  border: #ececec;
+span.growthShape {
+  border: 3px solid var(--growthBorder);
+  background-color: var(--growthFill);
 }
 
-input[type="radio"][active] + label span {
-   background-color: #ff0000;
-}
-input[type="radio"][active] + label span:hover {
-  /* background-color: #ff0000;
-  border: 3px solid #ff0000; */
+span.connectedShape {
+  border: 3px solid var(--growthBorder);
+  background-color: var(--growthFill);
 }
 
-/* input[type="radio"] + label span:hover {
+span.autonomyShape {
+  border: 3px solid var(--growthBorder);
+  background-color: var(--growthFill);
+}
+
+
+
+/* Checked colour */
+input[type="radio"]:checked ~ span.growthShape {
+  background-color: var(--checkedColour);
   text-align: center;
-  vertical-align: bottom;
-} */
-
-input[type="radio"] + label span:focus {
-  background-color: #ffffff;
-}
-input[type="radio"]:not([active]):not([disabled]):not(:checked) + label span:focus::before {
-   content: '';
-   display: inline-block;
-   width: 70%;
-   height: 70%;
-   border-radius: 50%;
-   /* background-color: #ff0000; */
-   background-color: green;
-   border: 3px solid #ff0000;
-   margin-top: calc(100% - 76%);
 }
 
-input[type="radio"]:not([active]):not([disabled]):not(:checked) + label span:hover::before {
-   content: '';
-   display: inline-block;
-   width: 70%;
-   height: 70%;
-   /* border-radius: 50%; */
-   background-color: black;
-   border: 3px solid #ff0000;
-   margin-top: calc(100% - 85%);
+input[type="radio"]:checked ~ span.connectionShape {
+  background-color: var(--checkedColour);
+  text-align: center;
 }
 
-input[type="radio"] + label span  {
-  /* border-radius: 50%; */
+input[type="radio"]:checked ~ span.autonomyShape {
+  background-color: var(--checkedColour);
+  text-align: center;
 }
 
-input[type="radio"][disabled] + label span::before,
-input[type="radio"][active] + label span::before,
-input[type="radio"]:checked + label span::before {
-   /* content: "✓"; */
-   color: #ffffff;
-   text-align: center;
-   font-size: 40px;
+.text:hover + .growthShape {
+  background-color: var(--growthHover);
 }
 
-input[type="radio"]:checked + label span {
-    background-color: #ff0000;
-    text-align: center;
+.text:hover + .connectionShape {
+  background-color: var(--connectionHover);
 }
+
+.text:hover + .autonomyShape {
+  background-color: var(--autonomyHover);
+}
+
+.textLong:hover + .growthShape {
+  background-color: var(--growthHover);
+}
+
+.textLong:hover + .connectionShape {
+  background-color: var(--connectionHover);
+}
+
+.textLong:hover + .autonomyShape {
+  background-color: var(--autonomyHover);
+}
+
+span.connectionShape:hover {
+  display: inline-block;
+  vertical-align: middle;
+  width: 115px;
+  height: 70px;
+  /* border: 3px solid blue; */
+  border-radius: 10px;
+  background-color: var(--connectionHover);
+  text-align: center;
+}
+
+span.growthShape:hover {
+  display: inline-block;
+  vertical-align: middle;
+  width: 115px;
+  height: 70px;
+  /* border: 3px solid blue; */
+  border-radius: 10px;
+  background-color: var(--growthHover);
+  text-align: center;
+}
+
+span.autonomyShape:hover {
+  display: inline-block;
+  vertical-align: middle;
+  width: 115px;
+  height: 70px;
+  /* border: 3px solid blue; */
+  border-radius: 10px;
+  background-color: var(--autonomyHover);
+  text-align: center;
+}
+

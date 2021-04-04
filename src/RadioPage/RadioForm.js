@@ -43,6 +43,9 @@ export default class RadioForm extends Component {
     // Stress levels: ${this.state.stress}`);
 
     const { autonomy, connection, growth } = this.state;
+    console.log(`autonomy = ${autonomy}
+    connection = ${connection}
+    growth = ${growth}`)
 
     
     event.preventDefault();
@@ -53,71 +56,83 @@ export default class RadioForm extends Component {
     return (
       <form onSubmit={this.handleSubmit}>
         <div className="row">
-        
+          <div></div>
           <div className="column">
-          <div id="heading-autonomy">Autonomy</div>
-  
-              <div onChange={this.setAutonomy.bind(this)}>
+         
+              <div id="heading-autonomy">Do I have autonomy?</div>
+              
+              <label onChange={this.setAutonomy.bind(this)} class="yes autonomy" for="autonomy1">
                 <input type="radio" name="autonomy" value="yes" id="autonomy1"/>
-                <label class="yes autonomy" for="autonomy1">Yes<span></span></label>
-              </div>
+                <span className="text">Yes</span>
+                <span className="shape autonomyShape"></span>
+              </label>
+          
+              <label onChange={this.setAutonomy.bind(this)} class="sometimes autonomy"for="autonomy2">
+                  <input type="radio" name="autonomy" value="sometimes" id="autonomy2"/>
+                  <span className="textLong">Sometimes</span>
+                  <span className="shape autonomyShape"></span>
+              </label>
+            
+              <label onChange={this.setAutonomy.bind(this)} class="no autonomy" for="autonomy3">
+                  <input type="radio" name="autonomy" value="no" id="autonomy3" active/>
+                  <span className="text">No</span>
+                  <span className="shape autonomyShape"></span>
+              </label>
 
-              <div onChange={this.setAutonomy.bind(this)}>
-                <input type="radio" name="autonomy" value="sometimes" id="autonomy2"/>
-                <label class="sometimes autonomy"for="autonomy2">Sometimes<span></span></label>
-              </div>
-
-              <div onChange={this.setAutonomy.bind(this)}>
-                <input type="radio" name="autonomy" value="no" id="autonomy3" active/>
-                <label class="no autonomy" for="autonomy3">No<span></span></label>
-              </div>
           </div>
 
-            <div className="column">
-            <div id="heading-connection">Connection?</div>
-        
-              <div id="tester"  onChange={this.setConnection.bind(this)}>
+          <div className="column">
+         
+              <div id="heading-connection">Do I feel connected?</div>
+              
+              <label onChange={this.setConnection.bind(this)} class="yes connection" for="connection1">
                 <input type="radio" name="connection" value="yes" id="connection1"/>
+                <span className="text">Yes</span>
+                <span className="shape connectionShape"></span>
+              </label>
+          
+              <label onChange={this.setConnection.bind(this)} class="sometimes connection"for="connection2">
+                  <input type="radio" name="connection" value="sometimes" id="connection2"/>
+                  <span className="textLong">Sometimes</span>
+                  <span className="shape connectionShape"></span>
+              </label>
+            
+              <label onChange={this.setConnection.bind(this)} class="no connection" for="connection3">
+                  <input type="radio" name="connection" value="no" id="connection3" active/>
+                  <span className="text">No</span>
+                  <span className="shape connectionShape"></span>
+              </label>
+         
+          </div>
 
-                <label class="yes connection" for="connection1">Yes<span></span></label>
 
-              </div>
-
-              <div onChange={this.setConnection.bind(this)}>
-                <input type="radio" name="connection" value="sometimes" id="connection2"/>
-
-                <label class="sometimes connection"for="connection2">Sometimes<span></span></label>
-
-              </div>
-
-              <div onChange={this.setConnection.bind(this)}>
-                <input type="radio" name="connection" value="no" id="connection3" active/>
-
-                <label class="no connection" for="connection3">No<span></span></label>
-
-              </div>
-            </div>
-
-            <div className="column">
-            <div id="heading-growth ">Growth?</div>
-              <div onChange={this.setGrowth.bind(this)}>
+          <div className="column">
+         
+              <div id="heading-growth">Am I gaining skills?</div>
+              
+              <label onChange={this.setGrowth.bind(this)} class="yes growth" for="growth1">
                 <input type="radio" name="growth" value="yes" id="growth1"/>
-                <label class="yes growth" for="growth1">Yes<span></span></label>
-              </div>
+                <span className="text">Yes</span>
+                <span className="shape growthShape"></span>
+              </label>
+          
+              <label onChange={this.setGrowth.bind(this)} class="sometimes growth"for="growth2">
+                  <input type="radio" name="growth" value="sometimes" id="growth2"/>
+                  <span className="textLong">Sometimes</span>
+                  <span className="shape growthShape"></span>
+              </label>
+            
+              <label onChange={this.setGrowth.bind(this)} class="no growth" for="growth3">
+                  <input type="radio" name="growth" value="no" id="growth3" active/>
+                  <span className="text">No</span>
+                  <span className="shape growthShape"></span>
+              </label>
+              
+          </div>
 
-              <div onChange={this.setGrowth.bind(this)}>
-                <input type="radio" name="growth" value="sometimes" id="growth2"/>
-                <label class="sometimes growth"for="growth2">Sometimes<span></span></label>
-              </div>
-
-              <div onChange={this.setGrowth.bind(this)}>
-                <input type="radio" name="growth" value="no" id="growth3" active/>
-                <label class="no growth" for="growth3">No<span></span></label>
-              </div>
-            </div>
-            <input id="submitButton" type="submit" value="Submit"/>
         </div>
-        
+        <div></div>
+        <input value="Next" type="submit"/>
       </form>
     );
   }
