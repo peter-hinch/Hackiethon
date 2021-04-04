@@ -5,15 +5,7 @@ import { authFunctions } from '../Firebase';
 class SignUp extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-      email: "",
-      password: "",
-      firstname: "",
-      lastname: "",
-      success: false,
-      login: false,
-      uid: null
-    };
+    this.state = this.props;
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
     this.redirectToLogin = this.redirectToLogin.bind(this);

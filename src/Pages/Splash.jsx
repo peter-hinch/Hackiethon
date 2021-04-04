@@ -2,7 +2,10 @@ import React, { Component } from 'react';
 import Home from '../Components/Home';
 
 class Splash extends Component {
-  state = {  }
+  constructor(props) {
+    super(props)
+    this.state = this.props;
+  }
   render() { 
     return ( 
       <React.Fragment>
