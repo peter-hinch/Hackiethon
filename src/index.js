@@ -3,17 +3,22 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 
-import { Route, NavLink, HashRouter } from "react-router-dom";
+import { Route, HashRouter } from "react-router-dom";
 import Navbar from './Components/Navbar';
 import Splash from './Pages/Splash';
 import SignUp from './Pages/SignUp';
 import LogIn from './Pages/LogIn';
-<<<<<<< HEAD
-import RadioForm from './RadioPage/RadioForm';
-=======
->>>>>>> 7604d8bc21518b0abb051501c9e5841455f45d8b
 import EvaluatePage from './Pages/EvaluatePage';
 
+let state = {
+  email: "",
+  password: "",
+  firstname: "",
+  lastname: "",
+  success: false,
+  login: false,
+  uid: null
+}
 
 ReactDOM.render(
   <React.StrictMode>
