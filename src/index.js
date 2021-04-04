@@ -31,6 +31,11 @@ ReactDOM.render(
   <React.StrictMode>
     <Navbar />
     <HashRouter>
+      <Route exact path='/' component={Splash} />
+      <Route exact path='/RadioForm' component={RadioForm} />
+      <Route exact path='/evaluate' component={EvaluatePage} />
+      <Route exact path='/signup' component={SignUp} />
+      <Route exact path='/login' component={LogIn} />
       <Route exact path='/' component={withProps(Splash, { ...state })} />
       <Route exact path='/home' component={withProps(Splash, { ...state })} />
       <Route exact path='/evaluate' component={withProps(EvaluatePage, { ...state })} />
