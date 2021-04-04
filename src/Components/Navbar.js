@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { HashRouter, NavLink } from "react-router-dom";
 import './NavStyle.css';
 
 const menu = document.querySelector('#mobile-menu'); //targets the spans
@@ -16,28 +17,30 @@ const Navbar = () => {
     }
     return (
         <nav className="navbar">
-        <div className="navbar__container">
-            <a id="navbar__logo" href="index.html"><i className="fas fa-laptop-code"></i>I Am Here</a>
-                <div  className="navbar__toggle" id="mobile-menu"onClick={handleClick}>
-                <span className="bar"></span> 
-                <span className="bar"></span>
-                <span className="bar"></span>
+        <HashRouter>
+            <div className="navbar__container">
+                <NavLink to="/home" id="navbar__logo"><i className="fas fa-laptop-code"></i>I Am Here</ NavLink>
+                    <div  className="navbar__toggle" id="mobile-menu"onClick={handleClick}>
+                    <span className="bar"></span> 
+                    <span className="bar"></span>
+                    <span className="bar"></span>
+                </div>
+                <ul className="navbar__menu">
+                    <li className="navbar__item">
+                        <NavLink to="/RadioForm" className="navbar__links">Home</ NavLink>
+                    </li>
+                    <li className="navbar__item">
+                        <NavLink to="/" class="navbar__links">Employee</ NavLink>
+                    </li>
+                    <li className="navbar__item">
+                        <NavLink to="/" className="navbar__links">Employer</ NavLink>
+                    </li>
+                    <li className="navbar__btn">
+                        <NavLink to="/signup" className="button" id = "signup__btn">Sign Up</ NavLink>
+                    </li>
+                </ul>
             </div>
-            <ul className="navbar__menu">
-                <li className="navbar__item">
-                    <a href="./home" className="navbar__links">Home</a>
-                </li>
-                <li className="navbar__item">
-                    <a href="./s" class="navbar__links">Employee</a>
-                </li>
-                <li className="navbar__item">
-                        <a href="./" className="navbar__links">Employer</a>
-                </li>
-                <li className="navbar__btn">
-                    <a href="./SignUp" className="button" id = "signup__btn">Sign In</a>
-                </li>
-            </ul>
-        </div>
+        </HashRouter>
     </nav>
     )
 }
