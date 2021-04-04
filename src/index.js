@@ -8,6 +8,7 @@ import Navbar from './Components/Navbar';
 import Splash from './Pages/Splash';
 import SignUp from './Pages/SignUp';
 import LogIn from './Pages/LogIn';
+import RadioForm from './RadioPage/RadioForm';
 
 
 ReactDOM.render(

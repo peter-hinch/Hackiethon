@@ -47,6 +47,10 @@ span {
 }
 
 
+.text {
+  pointer-events: none;
+}
+
 label.autonomy {
     cursor:pointer;
     color: #555;
@@ -113,8 +117,8 @@ input[type="radio"][active] + label span {
    background-color: #ff0000;
 }
 input[type="radio"][active] + label span:hover {
-  background-color: #ff0000;
-  border: 3px solid #ff0000;
+  /* background-color: #ff0000;
+  border: 3px solid #ff0000; */
 }
 
 /* input[type="radio"] + label span:hover {
@@ -130,8 +134,8 @@ input[type="radio"]:not([active]):not([disabled]):not(:checked) + label span:foc
    display: inline-block;
    width: 70%;
    height: 70%;
-   /* border-radius: 50%; */
-   background-color: #ff0000;
+   border-radius: 50%;
+   /* background-color: #ff0000; */
    background-color: green;
    border: 3px solid #ff0000;
    margin-top: calc(100% - 76%);
@@ -143,7 +147,7 @@ input[type="radio"]:not([active]):not([disabled]):not(:checked) + label span:hov
    width: 70%;
    height: 70%;
    /* border-radius: 50%; */
-   background-color: #ffffff;
+   background-color: black;
    border: 3px solid #ff0000;
    margin-top: calc(100% - 85%);
 }
