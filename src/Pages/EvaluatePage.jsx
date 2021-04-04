@@ -3,20 +3,24 @@ import Evaluator from '../Components/EvaluatePage/Evaluator';
 import {getStrings} from '../Components/EvaluatePage/resultStrings';
 
 class EvaluatePage extends Component {
+    constructor(props) {
+        super(props)
+        this.state = this.props;
+    }
     state = {
-        strings: getStrings(),
+        // strings: getStrings(),
 
-        satisfaction: 20,
-        stress: 60,
-        physical: 100,
+        // satisfaction: 20,
+        // stress: 60,
+        // physical: 100,
 
-        autonomy: "yes",
-        connections: "sometimes",
-        growth: "no",
+        // autonomy: "yes",
+        // connections: "sometimes",
+        // growth: "no",
 
-        oneThingToChange: "placeholder",
+        // oneThingToChange: "placeholder",
 
-        calledStrings: [],
+        // calledStrings: [],
     };
 
     callResultByInt(index, variable) {

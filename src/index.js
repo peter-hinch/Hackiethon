@@ -21,6 +21,12 @@ let state = {
   uid: null
 }
 
+function withProps(Component, props) {
+  return function(matchProps) {
+    return <Component {...props} {...matchProps} />
+  }
+}
+
 ReactDOM.render(
   <React.StrictMode>
     <Navbar />
@@ -30,6 +36,11 @@ ReactDOM.render(
       <Route exact path='/evaluate' component={EvaluatePage} />
       <Route exact path='/signup' component={SignUp} />
       <Route exact path='/login' component={LogIn} />
+      <Route exact path='/' component={withProps(Splash, { ...state })} />
+      <Route exact path='/home' component={withProps(SignUp, { ...state })} />
+      <Route exact path='/evaluate' component={withProps(EvaluatePage, { ...state })} />
+      <Route exact path='/signup' component={withProps(SignUp, { ...state })} />
+      <Route exact path='/login' component={withProps(LogIn, { ...state })} />
     </HashRouter>
   </React.StrictMode>,
   document.getElementById('root')
