@@ -8,7 +8,7 @@ function Evaluator(props) {
                 <h2 style={{
                     fontSize: "48px", 
                     marginBottom: "1%",
-                    backgroundImage: "linear-gradient(blue, white)"
+                    backgroundImage: "linear-gradient(to top, #002c6f 0%, #4267a1 100%)",
                 }}>{props.title}</h2>
                 <p> {props.description}</p>
             </div>

@@ -7,7 +7,7 @@ import Navbar from './Components/Navbar';
 import Splash from './Pages/Splash';
 import SignUp from './Pages/SignUp';
 import LogIn from './Pages/LogIn';
-import Final from './Pages/Final';
+import Final from './Pages/FInal';
 import SliderForm from './SliderPage/SliderForm';
 import RadioForm from './RadioPage/RadioForm'
 import EvaluatePage from './Pages/EvaluatePage';

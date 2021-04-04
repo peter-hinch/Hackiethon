@@ -19,8 +19,10 @@ const evalStrings = [
     "in the right direction and work your way towards satisfaction.",
 
     " - Take a break when you can. Allow yourself some time to recover.",
-    " - ",
-    " - ",
+    " - Look towards solutions for other problems you may be facing. Working on " + 
+       "solutions for your problems can improve your overall satisfaction.",
+    " - Maintain the things around you that keep you satisfied, and prepare for " + 
+       "problems in the future so you can easily account for them.",
 
     // 8 - 15: Stress title and descriptions
     
@@ -98,7 +100,8 @@ const evalStrings = [
 
     "You feel a strong connection with many, if not everyone around you.",
 
-    "You feel okay with those around you, but are facing slight issues.",
+    "You feel okay with those around you, but are facing slight issues regarding looking." + 
+    "for more connections, or you are concerned by the integrity of your current relations.",
 
     "You feel dissatisfied with the connections around you.",
 
@@ -127,7 +130,8 @@ const evalStrings = [
 
     " - Look for help or assistance from others in the field. Look online for solutions, " + 
        "or ask your teacher or coworker that you report to.",
-    " - ",
+    " - Work on understanding the difficult areas of your field. What problems do you " + 
+       "normally get stuck on? Take your time as you work towards the solutions.",
     " - Look for new things to find in your field of expertise, such as researching " + 
        "new topics you're unfamiliar with, or practicing something you don't have a " + 
        "lot of experience in.",
