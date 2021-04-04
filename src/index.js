@@ -31,7 +31,7 @@ ReactDOM.render(
     <Navbar />
     <HashRouter>
       <Route exact path='/' component={withProps(Splash, { ...state })} />
-      <Route exact path='/home' component={withProps(SignUp, { ...state })} />
+      <Route exact path='/home' component={withProps(Splash, { ...state })} />
       <Route exact path='/evaluate' component={withProps(EvaluatePage, { ...state })} />
       <Route exact path='/signup' component={withProps(SignUp, { ...state })} />
       <Route exact path='/login' component={withProps(LogIn, { ...state })} />
