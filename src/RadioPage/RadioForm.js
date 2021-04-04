@@ -85,19 +85,19 @@ export default class RadioForm extends Component {
          
               <div id="heading-connection">Do I feel connected?</div>
               
-              <label onChange={this.setConnection.bind(this)} class="yes connection" for="connection1">
+              <label class="radioLabel" onChange={this.setConnection.bind(this)} class="yes connection" for="connection1">
                 <input type="radio" name="connection" value="yes" id="connection1"/>
                 <span className="text">Yes</span>
                 <span className="shape connectionShape"></span>
               </label>
           
-              <label onChange={this.setConnection.bind(this)} class="sometimes connection"for="connection2">
+              <label class="radioLabel" onChange={this.setConnection.bind(this)} class="sometimes connection"for="connection2">
                   <input type="radio" name="connection" value="sometimes" id="connection2"/>
                   <span className="textLong">Sometimes</span>
                   <span className="shape connectionShape"></span>
               </label>
             
-              <label onChange={this.setConnection.bind(this)} class="no connection" for="connection3">
+              <label class="radioLabel" onChange={this.setConnection.bind(this)} class="no connection" for="connection3">
                   <input type="radio" name="connection" value="no" id="connection3" active/>
                   <span className="text">No</span>
                   <span className="shape connectionShape"></span>
@@ -110,19 +110,19 @@ export default class RadioForm extends Component {
          
               <div id="heading-growth">Am I gaining skills?</div>
               
-              <label onChange={this.setGrowth.bind(this)} class="yes growth" for="growth1">
+              <label class="radioLabel" onChange={this.setGrowth.bind(this)} class="yes growth" for="growth1">
                 <input type="radio" name="growth" value="yes" id="growth1"/>
                 <span className="text">Yes</span>
                 <span className="shape growthShape"></span>
               </label>
           
-              <label onChange={this.setGrowth.bind(this)} class="sometimes growth"for="growth2">
+              <label class="radioLabel" onChange={this.setGrowth.bind(this)} class="sometimes growth"for="growth2">
                   <input type="radio" name="growth" value="sometimes" id="growth2"/>
                   <span className="textLong">Sometimes</span>
                   <span className="shape growthShape"></span>
               </label>
             
-              <label onChange={this.setGrowth.bind(this)} class="no growth" for="growth3">
+              <label class="radioLabel" onChange={this.setGrowth.bind(this)} class="no growth" for="growth3">
                   <input type="radio" name="growth" value="no" id="growth3" active/>
                   <span className="text">No</span>
                   <span className="shape growthShape"></span>

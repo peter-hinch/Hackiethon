@@ -3,28 +3,23 @@ import Evaluator from '../Components/EvaluatePage/Evaluator';
 import {getStrings} from '../Components/EvaluatePage/resultStrings';
 
 class EvaluatePage extends Component {
-    constructor(props) {
-        super(props)
-        this.state = this.props;
-    }
+    
     state = {
-        // strings: getStrings(),
+        strings: getStrings(),
 
-        // satisfaction: 20,
-        // stress: 60,
-        // physical: 100,
+        satRes: 20,
+        strRes: 60,
+        phyRes: 100,
 
-        // autonomy: "yes",
-        // connections: "sometimes",
-        // growth: "no",
+        autRes: "yes",
+        conRes: "sometimes",
+        grwRes: "no",
 
         // oneThingToChange: "placeholder",
-
-        // calledStrings: [],
     };
 
     callResultByInt(index, variable) {
-        var temp = index * 5;
+        var temp = index * 8;
 
         if(variable > 67)
             return temp + 2;
@@ -35,7 +30,7 @@ class EvaluatePage extends Component {
     }
 
     callResultByString(index, variable) {
-        var temp = index * 5;
+        var temp = index * 8;
 
         if(variable === "yes")
             return temp + 2;
@@ -47,48 +42,71 @@ class EvaluatePage extends Component {
 
     callTitle(index)
     {
-        return index * 5;
+        return index * 8;
     }
 
     callDescription(index)
     {
-        return index * 5 + 1;
+        return index * 8 + 1;
+    }
+
+    callThingsToDo(index, todoNumber)
+    {
+        return index * 8 + 4 + todoNumber;
     }
 
     render () {
 
         return (
             <React.Fragment>
-                <div>
+                <div style={{backgroundColor: "#f9f3de"}}>
                     <Evaluator
                         title={this.state.strings[this.callTitle(0)]}
                         description={this.state.strings[this.callDescription(0)]}
-                        result={this.state.strings[this.callResultByInt(0, this.state.satisfaction)]}
+                        result={this.state.strings[this.callResultByInt(0, this.state.satRes)]}
+                        todo1={this.state.strings[this.callThingsToDo(0, 1)]}
+                        todo2={this.state.strings[this.callThingsToDo(0, 2)]}
+                        todo3={this.state.strings[this.callThingsToDo(0, 3)]}
                     />
                     <Evaluator 
                         title={this.state.strings[this.callTitle(1)]}
                         description={this.state.strings[this.callDescription(1)]}
-                        result={this.state.strings[this.callResultByInt(1, this.state.stress)]}
+                        result={this.state.strings[this.callResultByInt(1, this.state.strRes)]}
+                        todo1={this.state.strings[this.callThingsToDo(1, 1)]}
+                        todo2={this.state.strings[this.callThingsToDo(1, 2)]}
+                        todo3={this.state.strings[this.callThingsToDo(1, 3)]}
                     />
                     <Evaluator 
                         title={this.state.strings[this.callTitle(2)]}
                         description={this.state.strings[this.callDescription(2)]}
-                        result={this.state.strings[this.callResultByInt(2, this.state.physical)]}
+                        result={this.state.strings[this.callResultByInt(2, this.state.phyRes)]}
+                        todo1={this.state.strings[this.callThingsToDo(2, 1)]}
+                        todo2={this.state.strings[this.callThingsToDo(2, 2)]}
+                        todo3={this.state.strings[this.callThingsToDo(2, 3)]}
                     />
                     <Evaluator 
                         title={this.state.strings[this.callTitle(3)]}
                         description={this.state.strings[this.callDescription(3)]}
-                        result={this.state.strings[this.callResultByString(3, this.state.autonomy)]}
+                        result={this.state.strings[this.callResultByString(3, this.state.autRes)]}
+                        todo1={this.state.strings[this.callThingsToDo(3, 1)]}
+                        todo2={this.state.strings[this.callThingsToDo(3, 2)]}
+                        todo3={this.state.strings[this.callThingsToDo(3, 3)]}
                     />
                     <Evaluator
                         title={this.state.strings[this.callTitle(4)]}
                         description={this.state.strings[this.callDescription(4)]}
-                        result={this.state.strings[this.callResultByString(4, this.state.connections)]}
+                        result={this.state.strings[this.callResultByString(4, this.state.conRes)]}
+                        todo1={this.state.strings[this.callThingsToDo(4, 1)]}
+                        todo2={this.state.strings[this.callThingsToDo(4, 2)]}
+                        todo3={this.state.strings[this.callThingsToDo(4, 3)]}
                     />
                     <Evaluator 
                         title={this.state.strings[this.callTitle(5)]}
                         description={this.state.strings[this.callDescription(5)]}
-                        result={this.state.strings[this.callResultByString(5, this.state.growth)]}
+                        result={this.state.strings[this.callResultByString(5, this.state.grwRes)]}
+                        todo1={this.state.strings[this.callThingsToDo(5, 1)]}
+                        todo2={this.state.strings[this.callThingsToDo(5, 2)]}
+                        todo3={this.state.strings[this.callThingsToDo(5, 3)]}
                     />
                 </div>
             </React.Fragment>

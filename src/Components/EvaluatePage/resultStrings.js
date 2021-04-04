@@ -1,6 +1,6 @@
 const evalStrings = [
     
-    // 0 - 4: Satisfaction title and descriptions
+    // 0 - 7: Satisfaction title and descriptions
     
     "Satisfaction",
 
@@ -18,7 +18,11 @@ const evalStrings = [
     "you are currently doing. With some simple beginning steps, you can move yourself " + 
     "in the right direction and work your way towards satisfaction.",
 
-    // 5 - 9: Stress title and descriptions
+    " - Take a break when you can. Allow yourself some time to recover.",
+    " - ",
+    " - ",
+
+    // 8 - 15: Stress title and descriptions
     
     "Stress",
 
@@ -36,7 +40,14 @@ const evalStrings = [
     "alleviate that stress so it doesn't affect you. Once you take the steps to calm " + 
     "yourself, you will feel better.",
 
-    // 10 - 14: Physical title and descriptions
+    " - Take some moments to relax and calm down. Focus on deep breaths.",
+    " - Understand what you are facing and look towards a constructive solution for " + 
+       "problems that are causing you stress.",
+    " - Prepare for future inconveniences that can lead to stress. Understand what " + 
+       "could potentially cause you stress in the future, and consider a plan that " +
+       "results in a long term benefit.",
+
+    // 16 - 23: Physical title and descriptions
     
     "Physical",
 
@@ -53,19 +64,33 @@ const evalStrings = [
     "or self-esteem. With the right steps to take, you can improve your mental and " + 
     "physical qualities around your physiological state.",
 
-    // 15 - 19: Autonomy title and descriptions
+    " - Make sure you are eating properly. Stick as close to a balanced diet as you can.",
+    " - Create a small exercise routine. Work on a balance of muscles and cardio.",
+    " - Create fitness goals that exceed your current fitness state, and strive for it " +
+       "as best you can.",
+
+    // 24 - 31: Autonomy title and descriptions
     
     "Autonomy",
 
     "Find the drive to strive in work and study.",
 
-    "You feel comfortable in your responsibilities for working and studying.",
+    "You feel comfortable in your responsibilities for working and studying. Most issues " +
+    "faced within your efforts are easily managed. Keep up the good work!",
 
-    "You're facing slight issues in staying focused in work and study.",
+    "Your productivity is neutral and balanced. There's small improvements to make to " + 
+    "increase work output.",
 
-    "You feel a strong issue in working or studying.",
+    "You feel a strong issue in working or studying. Finding a motivation or solution " + 
+    "to work efficiently can help resolve issues in work productivity.",
 
-    // 20 - 24: Connection title and descriptions
+    " - Take some time off what you are working on and relax.",
+    " - Break down overwhelming tasks into smaller parts. Find accomplishment with " + 
+       "each small task completed as you work towards completing the one large " + 
+       "unified objective.",
+    " - Solidify your study/work plan.",
+
+    // 32 - 39: Connection title and descriptions
     
     "Connection",
 
@@ -73,24 +98,39 @@ const evalStrings = [
 
     "You feel a strong connection with many, if not everyone around you.",
 
-    "You feel a balance in your connections, and have found a connection with a fraction " + 
-    "of those around you.",
+    "You feel okay with those around you, but are facing slight issues.",
 
     "You feel dissatisfied with the connections around you.",
 
-    // 25 - 29: Education title and descriptions
+    " - Understand that it is okay to feel isolated or dissatisfied with your social " + 
+       "relations. Many people are alone or face issues with their friends and family.",
+    " - Look towards resolving a conflict between your relations, or look to start " + 
+       "healthy conversations with new people.",
+    " - Solidify your relationships with other people by listening to their problems. " + 
+       "most people can't solve their issues alone, and giving them support can " + 
+       "strengthen your connections with those around you.",
+
+    // 40 - 47: Education title and descriptions
     
     "Experience & Education",
 
     "Learn and achieve more in your practice.",
 
     "You feel like you are advancing in your field, and you are learning and " + 
-    "experiencing new things rapidly and quickly.",
+    "experiencing new things rapidly and quickly. Great work!",
 
-    "You feel like you are in a steady position in educational and practical experiences. ",
+    "You feel like you are in a steady position in educational and practical experiences, " + 
+    "but some fields can be improved.",
     
     "You feel like you are at a standstill in education and experience. You may not be " + 
     "experiencing new things, or you are stuck with where you are in your learning journey.",
+
+    " - Look for help or assistance from others in the field. Look online for solutions, " + 
+       "or ask your teacher or coworker that you report to.",
+    " - ",
+    " - Look for new things to find in your field of expertise, such as researching " + 
+       "new topics you're unfamiliar with, or practicing something you don't have a " + 
+       "lot of experience in.",
 
 ];
 

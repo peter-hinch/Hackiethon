@@ -13,13 +13,13 @@ import RadioForm from './RadioPage/RadioForm'
 import EvaluatePage from './Pages/EvaluatePage';
 
 let state = {
-  email: "",
-  password: "",
-  firstname: "",
-  lastname: "",
-  success: false,
-  login: false,
-  uid: null
+  // email: "",
+  // password: "",
+  // firstname: "",
+  // lastname: "",
+  // success: false,
+  // login: false,
+  // uid: null
 }
 
 function withProps(Component, props) {
@@ -33,7 +33,7 @@ ReactDOM.render(
     <Navbar />
     <HashRouter>
       <Route exact path='/' component={withProps(Splash, { ...state })} />
-      <Route exact path='/home' component={withProps(SignUp, { ...state })} />
+      <Route exact path='/home' component={withProps(Splash, { ...state })} />
       <Route exact path='/evaluate' component={withProps(EvaluatePage, { ...state })} />
       <Route exact path='/final' component={withProps(Final, { ...state })} />
       <Route exact path='/signup' component={withProps(SignUp, { ...state })} />
