@@ -35,8 +35,6 @@ input[type="radio"] {
   margin: auto;
   box-sizing: content-box;
   cursor: pointer;
-  justify-content: center;
-  align-items: center;
   text-decoration: none;
   padding: 10px 20px;
   width: 120px;
@@ -74,11 +72,6 @@ input[type="radio"] {
   /* height: 100px; */
 }
 
-span {
-  margin: 10px;
-  margin-left: 10px;
-}
-
 #radiolabel {
   position: relative;
   display: flex;
@@ -102,7 +95,7 @@ label.connection {
   color: #555;
   display: grid;
   grid-template-columns: 1fr;
-  text-align: end;
+  text-align: start;
   font-size: 30px;
   grid-template-rows: 1fr;
   justify-content: center;
@@ -140,7 +133,8 @@ label.growth {
 
 .textLong {
   position: absolute;
-  padding: 6px;
+  padding: 40px;
+  padding-left: 8px;
   font-size: 1.1rem;
 }
 
