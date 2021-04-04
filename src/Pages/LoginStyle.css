@@ -62,7 +62,7 @@
   color: white !important;
   background: #7adaf6;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1260px) {
   #main__login_con {
     display: grid;
     grid-template-columns: auto;
@@ -74,13 +74,14 @@
     text-align: center;
     padding-top: 0px;
     padding-right: 0px;
+    padding-left: 0px;
     margin-top: 0px;
     grid-row-start: 1;
   }
   #login__img {
     width: 60%;
     height: 60%;
-    align-items: center;
+
     padding-bottom: 0px;
     margin-bottom: 0px;
   }
