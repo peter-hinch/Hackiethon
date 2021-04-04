@@ -14,10 +14,9 @@
 #sliderform {
   background-color: #f9f3de;
   display: grid;
-
+  padding-top: 4em;
   justify-items: center;
 }
-
 * {
   margin: auto;
 }
