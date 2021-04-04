@@ -29,11 +29,11 @@ const Navbar = () => {
                     <li className="navbar__item">
                         <NavLink to="/" className="navbar__links">Home</ NavLink>
                     </li>
-                    <li className="navbar__item">
+                    {/* <li className="navbar__item">
                         <NavLink to="/" class="navbar__links">Employee</ NavLink>
-                    </li>
+                    </li> */}
                     <li className="navbar__item">
-                        <NavLink to="/" className="navbar__links">Employer</ NavLink>
+                        <NavLink to="/login" className="navbar__links">Login</ NavLink>
                     </li>
                     <li className="navbar__btn">
                         <NavLink to="/signup" className="button" id = "signup__btn">Sign Up</ NavLink>
