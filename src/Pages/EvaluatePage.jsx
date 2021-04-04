@@ -14,8 +14,6 @@ class EvaluatePage extends Component {
         autRes: "yes",
         conRes: "sometimes",
         grwRes: "no",
-
-        // oneThingToChange: "placeholder",
     };
 
     callResultByInt(index, variable) {

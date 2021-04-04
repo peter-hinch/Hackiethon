@@ -9,7 +9,7 @@ function ByeBye(props) {
             <div className="main">
                 <div className="main__container">
                     <div className="main__content"> 
-                        <h1>Stay Hydrated</h1>
+                        <h1>See You Tomorrow</h1>
                 </div>
                 <div className="main__image--container">
                         <img src={campfire}alt="pic" id ="main__img"></img>

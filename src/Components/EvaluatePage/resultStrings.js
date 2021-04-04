@@ -67,7 +67,7 @@ const evalStrings = [
     "physical qualities around your physiological state.",
 
     " - Make sure you are eating properly. Stick as close to a balanced diet as you can.",
-    " - Create a small exercise routine. Work on a balance of muscles and cardio.",
+    " - Create a small exercise routine. Work on a balance of muscle building and cardio.",
     " - Create fitness goals that exceed your current fitness state, and strive for it " +
        "as best you can.",
 
@@ -90,7 +90,8 @@ const evalStrings = [
     " - Break down overwhelming tasks into smaller parts. Find accomplishment with " + 
        "each small task completed as you work towards completing the one large " + 
        "unified objective.",
-    " - Solidify your study/work plan.",
+    " - Solidify your study/work plan. Organise your working times and efforts, and " + 
+       "reorganise it for a perfect balance of workload and effort.",
 
     // 32 - 39: Connection title and descriptions
     
