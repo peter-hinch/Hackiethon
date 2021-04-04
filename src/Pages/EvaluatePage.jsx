@@ -4,10 +4,8 @@ import {getStrings} from '../Components/EvaluatePage/resultStrings';
 
 class EvaluatePage extends Component {
     constructor(props) {
-        constructor(props) {
-            super(props)
-            this.state = this.props;
-          }
+        super(props)
+        this.state = this.props;
     }
     state = {
         // strings: getStrings(),
