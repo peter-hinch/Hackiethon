@@ -11,13 +11,13 @@ import LogIn from './Pages/LogIn';
 import EvaluatePage from './Pages/EvaluatePage';
 
 let state = {
-  email: "",
-  password: "",
-  firstname: "",
-  lastname: "",
-  success: false,
-  login: false,
-  uid: null
+  // email: "",
+  // password: "",
+  // firstname: "",
+  // lastname: "",
+  // success: false,
+  // login: false,
+  // uid: null
 }
 
 function withProps(Component, props) {
