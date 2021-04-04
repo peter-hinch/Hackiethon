@@ -8,7 +8,7 @@ import Navbar from './Components/Navbar';
 import Splash from './Pages/Splash';
 import SignUp from './Pages/SignUp';
 import LogIn from './Pages/LogIn';
-import RadioForm from './RadioPage/RadioForm';
+import SliderForm from './SliderPage/SliderForm';
 import EvaluatePage from './Pages/EvaluatePage';
 
 let state = {
@@ -35,6 +35,7 @@ ReactDOM.render(
       <Route exact path='/home' component={withProps(SignUp, { ...state })} />
       <Route exact path='/evaluate' component={withProps(EvaluatePage, { ...state })} />
       <Route exact path='/signup' component={withProps(SignUp, { ...state })} />
+      <Route exact path='/SliderForm' component={withProps(SliderForm, { ...state })} />
       <Route exact path='/login' component={withProps(LogIn, { ...state })} />
     </HashRouter>
   </React.StrictMode>,

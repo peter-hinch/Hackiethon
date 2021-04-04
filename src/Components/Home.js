@@ -14,7 +14,7 @@ function Home(props) {
 
                     <div className="main__content"> 
                         <h1>How Are You?</h1>
-                        <button className="main__button"><NavLink to="/RadioForm" >Start Now</ NavLink></button>
+                        <button className="main__button"><NavLink to="/SliderForm">Start Now</ NavLink></button>
                     </div>
                 </div>
             </div>
