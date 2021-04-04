@@ -51,7 +51,7 @@ span {
     margin-left: 10px;
 }
 
-label {
+.radioLabel {
   position: relative;
   display: flex;
 }
