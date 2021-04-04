@@ -1,23 +1,29 @@
 const evalStrings = [
     
     // 0 - 7: Satisfaction title and descriptions
-    
+
+    // title
     "Satisfaction",
 
+    // description
     "Understand how satisfied you are with where you are and how you feel.",
 
+    // good result
     "You are currently satisfied with where you are right now. There are very minimal " + 
     "circumstances that are negatively impacting your happiness. Great job!",
 
+    // neutral result
     "You feel a slight concern with where you are right now. There are some things in " + 
     "life that you are finding to be slightly challenging. You have the integrity to " + 
     "find the solutions to your problem.",
 
+    // bad result
     "You are feeling a great discomfort in your current situation in life. There are " + 
     "some situations that need to be changed in order to find satisfaction with what " + 
     "you are currently doing. With some simple beginning steps, you can move yourself " + 
     "in the right direction and work your way towards satisfaction.",
 
+    // todo
     " - Take a break when you can. Allow yourself some time to recover.",
     " - Look towards solutions for other problems you may be facing. Working on " + 
        "solutions for your problems can improve your overall satisfaction.",
@@ -28,7 +34,7 @@ const evalStrings = [
     
     "Stress",
 
-    "Manage your stress to set it aside or remove it, and improve your comfort.",
+    "Know what affects you negatively, and solve it.",
 
     "You are currently satisfied with your situation around you. There are no stresses " + 
     "in your life, or any potential worries or inconveniences are not affecting you " + 
