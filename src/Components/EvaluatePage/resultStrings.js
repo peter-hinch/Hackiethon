@@ -59,9 +59,10 @@ const evalStrings = [
 
     "Find the drive to strive in work and study.",
 
-    "You feel comfortable in your responsibilities for working and studying.",
+    "You feel comfortable in your responsibilities for working and studying. Most issues " +
+    "faced within your efforts are easily managed. Keep up the good work!",
 
-    "You're facing slight issues in staying focused in work and study.",
+    "You're facing slight issues with work and study. ",
 
     "You feel a strong issue in working or studying.",
 
