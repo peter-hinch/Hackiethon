@@ -13,7 +13,7 @@ export default class SliderForm extends Component {
     }
 
     this.data = {
-      // user: this.props.location.state.user,
+      user: this.props.location.state.user,
       satisfaction: 50,
       health: 50,
       stress: 50,
@@ -42,6 +42,13 @@ export default class SliderForm extends Component {
     this.props.location.state = this.data;
     console.log(this.props.location.state);
     event.preventDefault();
+    data.satisfaction = this.state.satisfaction;
+    data.stress = this.state.stress;
+    data.health =  this.state.health;
+    return <Redirect to={{
+      pathname: '/RadioForm',
+      state: { data }
+  }} />
   }
 
 

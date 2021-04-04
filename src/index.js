@@ -3,15 +3,14 @@ import ReactDOM from 'react-dom';
 import reportWebVitals from './reportWebVitals';
 
 import { Route, HashRouter } from "react-router-dom";
+import EvaluatePage from './Pages/EvaluatePage';
+import Final from './Pages/Final';
+import LogIn from './Pages/LogIn';
 import Navbar from './Components/Navbar';
-import Splash from './Pages/Splash';
+import RadioForm from './RadioPage/RadioForm'
 import SignUp from './Pages/SignUp';
 import SliderForm from './SliderPage/SliderForm';
-import LogIn from './Pages/LogIn';
-import Final from './Pages/Final';
-import SliderForm from './SliderPage/SliderForm';
-import RadioForm from './RadioPage/RadioForm'
-import EvaluatePage from './Pages/EvaluatePage';
+import Splash from './Pages/Splash';
 
 let state = {
   // email: "",
