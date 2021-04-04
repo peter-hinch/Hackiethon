@@ -132,7 +132,7 @@ export default class RadioForm extends Component {
 
         </div>
         <div></div>
-        <input value="Next" type="submit"/>
+        <input value="Next" type="submit" id = 'radiobutton1'/>
       </form>
     );
   }
