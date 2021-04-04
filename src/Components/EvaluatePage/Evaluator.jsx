@@ -1,34 +1,23 @@
 import React from 'react';
+import './EvaluatorStyle.css';
 
 function Evaluator(props) {
 
     return (
-        <div style={{padding: "3%"}}>
-            <div style={{padding: "3%"}}>
-                <h2 style={{
-                    fontSize: "48px", 
-                    marginBottom: "1%",
-                    backgroundImage: "linear-gradient(to top, #002c6f 0%, #4267a1 100%)",
-                }}>{props.title}</h2>
-                <p> {props.description}</p>
+        <div id="main_evaluate_body">
+            <div id="eval_container1">
+                <h2 id="eval_title">{props.title}</h2>
+                <p id="eval_desc">{props.description}</p>
             </div>
-            <p 
-                style={{
-                    marginLeft: "20%",
-                    marginRight: "20%",
-                    marginTop: "5%",
-                    marginBottom: "5%",
-                    fontFamily: "helvetica",
-                    fontSize: "24px"
-                }}>
+            <p id="eval_result">
                 {props.result}
             </p>
-            <div style={{padding: "3%"}}>
-                <p style={{fontFamily: "arial"}}>Here's some things you can do to improve:</p>
-                    <div style={{padding: "3%" }}>
-                    <p style={{marginTop: "1%", marginBottom: "1%", fontFamily: "arial"}}>{props.todo1}</p>
-                    <p style={{marginTop: "1%", marginBottom: "1%", fontFamily: "arial"}}>{props.todo2}</p>
-                    <p style={{marginTop: "1%", marginBottom: "1%", fontFamily: "arial"}}>{props.todo3}</p>
+            <div id="todo_container">
+                <h3 id="todo_title">Here's some things you can do to improve:</h3>
+                    <div>
+                    <p className="todo">{props.todo1}</p>
+                    <p className="todo">{props.todo2}</p>
+                    <p className="todo">{props.todo3}</p>
                 </div>
             </div>
         </div>
