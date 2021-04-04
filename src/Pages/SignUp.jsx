@@ -62,7 +62,7 @@ class SignUp extends Component {
             <label>Last Name: <input name="lastname" id="lastname" type="text"className='form_input_si' required onChange={this.handleChange} value={this.state.lastname} /></label><br />
             <label>Email: <input name="email" id="email" type="text"className='form_input_si' required onChange={this.handleChange} value={this.state.email} /></label><br />
             <label>Password: <input name="password" id="password" type="password" className='form_input_si'required onChange={this.handleChange} /></label><br />
-            <button type="submit" id = "signin_submit">Log In</button>
+            <button type="submit" id = "signin_submit">Sign Up</button>
           </form>
         </div>
       </React.Fragment>
