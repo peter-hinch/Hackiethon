@@ -8,7 +8,10 @@ import Navbar from './Components/Navbar';
 import Splash from './Pages/Splash';
 import SignUp from './Pages/SignUp';
 import LogIn from './Pages/LogIn';
+<<<<<<< HEAD
 import RadioForm from './RadioPage/RadioForm';
+=======
+>>>>>>> 7604d8bc21518b0abb051501c9e5841455f45d8b
 import EvaluatePage from './Pages/EvaluatePage';
 
 
