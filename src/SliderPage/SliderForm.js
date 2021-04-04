@@ -11,7 +11,9 @@ export default class SliderForm extends Component {
     this.state = {
       satisfaction: 50,
       stress: 50,
-      health: 50
+      health: 50,
+      user: this.props.location.state.user,
+      redirect: false
     }
 
     this.data = {
@@ -40,27 +42,38 @@ export default class SliderForm extends Component {
   handleSubmit(event) {
     // alert(`Satisfaction: ${this.state.satisfaction}.
     // Health: ${this.state.health}
-    // Stress levels: ${this.state.stress}`);
-    this.props.location.state = this.data;
-    console.log(this.props.location.state);
-    event.preventDefault();
-    this.data.satisfaction = this.state.satisfaction;
-    this.data.stress = this.state.stress;
-    this.data.health =  this.state.health;
-    return <Redirect to={{
-      pathname: '/RadioForm',
-      state: { user: {firstname: this.state.firstname,
-        lastname: this.state.lastname} }
-       }
-  } />
+    // // Stress levels: ${this.state.stress}`);
+    // this.props.location.state = this.data;
+    // // console.log(this.props.location.state);
+    
+    // this.data.satisfaction = this.state.satisfaction;
+    // this.data.stress = this.state.stress;
+    // this.data.health =  this.state.health;
+    console.log('test');
+    
+    this.setState({redirect: true});
+    console.log(this.state);
+   event.preventDefault();
   }
 
 
   render() {
-  
+    if (this.state.redirect) {
+      console.log("Ready to redirect");
+      return <Redirect to={{
+        pathname: '/RadioForm',
+        state: { user: {firstname: this.user.firstname,
+          lastname: this.user.lastname},
+        sliders: {health: this.state.health,
+          satisfaction: this.state.satisfaction, stress: this.state.stress} }
+      }
+         
+    } />
+    }
+    console.log("arrived");
     return (
       <div id = 'main__body'>
-        <form onSubmit={this.handleSubmit} id = 'sliderform'>
+        <div  onSubmit={this.handleSubmit} id = 'sliderform'>
           <div id="sliderContainer">
             <label>
               Satisfaction: <br/>  
@@ -77,9 +90,9 @@ export default class SliderForm extends Component {
             <input id="health" name='health' type="range" value={this.state.value} onChange={this.handleChange} />
           </label>
        
-          <NavLink id="submitButton" to="/RadioForm" class="navbar__links">Next</ NavLink>
+          <button onClick = {this.handleSubmit} id="submitButton" className="navbar__links">Next</button>
           </div>
-          </form>
+          </div>
         </div>
     );
   }

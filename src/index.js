@@ -38,7 +38,7 @@ ReactDOM.render(
       <Route exact path='/signup' component={SignUp} />
       <Route exact path='/login' component={LogIn} />
       <Route exact path='/sliders' component={SliderForm} />
-      <Route exact path='/SliderForm' component={SliderForm} />
+      {/* <Route exact path='/SliderForm' component={SliderForm} /> */}
       <Route exact path='/RadioForm' component={RadioForm} />
       <Route exact path='/final' component={Final} />
 
