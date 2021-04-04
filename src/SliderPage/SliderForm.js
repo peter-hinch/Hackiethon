@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
+import { Redirect } from 'react-router-dom';
 import './slider.css';
+import { HashRouter, NavLink } from "react-router-dom";
 
 
 export default class SliderForm extends Component {
@@ -13,7 +15,7 @@ export default class SliderForm extends Component {
     }
 
     this.data = {
-      user: this.props.location.state.user,
+      // user: this.props.location.state.user,
       satisfaction: 50,
       health: 50,
       stress: 50,
@@ -42,13 +44,15 @@ export default class SliderForm extends Component {
     this.props.location.state = this.data;
     console.log(this.props.location.state);
     event.preventDefault();
-    data.satisfaction = this.state.satisfaction;
-    data.stress = this.state.stress;
-    data.health =  this.state.health;
+    this.data.satisfaction = this.state.satisfaction;
+    this.data.stress = this.state.stress;
+    this.data.health =  this.state.health;
     return <Redirect to={{
       pathname: '/RadioForm',
-      state: { data }
-  }} />
+      state: { user: {firstname: this.state.firstname,
+        lastname: this.state.lastname} }
+       }
+  } />
   }
 
 
@@ -72,7 +76,8 @@ export default class SliderForm extends Component {
           <br/>Physical Health: <br/>
             <input id="health" name='health' type="range" value={this.state.value} onChange={this.handleChange} />
           </label>
-          <input id="submitButton" type="submit" value="Submit" />
+       
+          <NavLink id="submitButton" to="/RadioForm" class="navbar__links">Next</ NavLink>
           </div>
           </form>
         </div>
