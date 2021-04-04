@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
-import yoga from './yoga.svg'
-import './HomeStyle.css'
+import yoga from './yoga.svg';
+import './HomeStyle.css';
+import { HashRouter, NavLink } from "react-router-dom";
+
 function Home(props) {
     return (
     
@@ -14,7 +16,7 @@ function Home(props) {
                         <h1>How Are You?</h1>
                        
                         
-                        <button className="main__button"><a href="signup.html">Get Started</a></button>
+                        <button className="main__button"><NavLink to="/RadioForm" >Start Now</ NavLink></button>
                     </div>
                 </div>
             </div>
