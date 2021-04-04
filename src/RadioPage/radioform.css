@@ -2,7 +2,7 @@
   --border: black;
   --fill: #ede7dc;
   --hoverColour: #d9cbc1;
-  --checkedColour: #727c96;
+  --checkedColour: #c9cbd0;
 
   --autonomyFill: var(--fill);
   --autonomyBorder: var(--border);
