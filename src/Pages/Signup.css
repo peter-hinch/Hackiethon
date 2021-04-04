@@ -17,6 +17,9 @@
   height: 80%;
   width: 80%;
 }
+#signin_form {
+  padding-right: 200px;
+}
 #signin_form input[type="text"],
 [type="password"] {
   padding: 8px;
@@ -67,6 +70,7 @@
   #signin_form {
     text-align: center;
     padding-top: 0px;
+    padding-right: 0px;
     margin-top: 0px;
     grid-row-start: 1;
   }
