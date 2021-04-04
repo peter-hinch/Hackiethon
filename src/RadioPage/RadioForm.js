@@ -12,42 +12,71 @@ export default class RadioForm extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      autonomy: 'sometimes',
-      connection: 'sometimes',
-      growth: 'sometimes',
+      user: {
+        name: {
+          lastname: this.props.location.state.user.lastname,
+          firstname: this.props.location.state.user.firstname
+        },
+        sliders: {
+          satisfaction: 50,
+          stress: 50,
+          health: 50
+        },
+        radios: {
+          autonomy: 'sometimes',
+          growth: 'sometimes',
+          connection: 'sometimes'
+        },
+        redirect: false
+      }
     }
-  
-
-    // this.handleChange = this.handleChange.bind(this);
+      // user: this.props.location.state.user
+    
+    // this.state = {
+    //   user: {
+    //     name: {
+    //       lastname: this.props.location.state.user.name.lastname,
+    //       firstname: this.props.location.state.user.name.firstname
+    //     },
+    //     sliders: {
+    //       satisfaction: this.props.location.state.user.sliders.satisfaction,
+    //       stress: this.props.location.state.user.sliders.stress,
+    //       health: this.props.location.state.user.sliders.health
+    //     },
+    //     radios: {
+    //       autonomy: 'sometimes',
+    //       growth: 'sometimes',
+    //       connection: 'sometimes'
+    //     },
+    //     redirect: false
+    //   }
+    // }
+    console.log(JSON.stringify(this.state));
+    
+    this.setRadio = this.setRadio.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
 
 
-  setAutonomy(event) {
-    this.setState({ [event.target.name]: event.target.value });
+  setRadio(event) {
+    this.setState( (prevState) => ({...prevState.radios[event.target.name] = event.target.value}));
   }
 
-  setConnection(event) {
-    this.setState({ [event.target.name]: event.target.value });
-  }
+  // setConnection(event) {
+  //   this.setState({ [event.target.name]: event.target.value });
+  // }
 
-  setGrowth(event) {
-    this.setState({ [event.target.name]: event.target.value });
-  }
+  // setGrowth(event) {
+  //   this.setState({ [event.target.name]: event.target.value });
+  // }
 
 
   handleSubmit(event) {
     // alert(`Satisfaction: ${this.state.satisfaction}.
     // Growth: ${this.state.growth}
     // Stress levels: ${this.state.stress}`);
-  
-    const { autonomy, connection, growth } = this.state;
-    console.log(`autonomy = ${autonomy}
-    connection = ${connection}
-    growth = ${growth}`)
 
-    
     event.preventDefault();
   }
 
@@ -61,19 +90,19 @@ export default class RadioForm extends Component {
          
               <div id="heading-autonomy">Do I have autonomy?</div>
               
-              <label onChange={this.setAutonomy.bind(this)} class="yes autonomy  radiolabel" for="autonomy1">
+              <label onChange={this.setRadio.bind(this)} class="yes autonomy  radiolabel" for="autonomy1">
                 <input type="radio" name="autonomy" value="yes" id="autonomy1"/>
                 <span className="text">Yes</span>
                 <span className="shape autonomyShape"></span>
               </label>
           
-              <label onChange={this.setAutonomy.bind(this)} class="sometimes autonomy radiolabel"for="autonomy2">
+              <label onChange={this.setRadio.bind(this)} class="sometimes autonomy radiolabel"for="autonomy2">
                   <input type="radio" name="autonomy" value="sometimes" id="autonomy2"/>
                   <span className="textLong">Sometimes</span>
                   <span className="shape autonomyShape"></span>
               </label>
             
-              <label onChange={this.setAutonomy.bind(this)} class="no autonomy radiolabel" for="autonomy3">
+              <label onChange={this.setRadio.bind(this)} class="no autonomy radiolabel" for="autonomy3">
                   <input type="radio" name="autonomy" value="no" id="autonomy3" active/>
                   <span className="text">No</span>
                   <span className="shape autonomyShape"></span>
@@ -85,19 +114,19 @@ export default class RadioForm extends Component {
          
               <div id="heading-connection">Do I feel connected?</div>
               
-              <label class="radioLabel" onChange={this.setConnection.bind(this)} class="yes connection" for="connection1">
+              <label class="radioLabel" onChange={this.setRadio.bind(this)} class="yes connection" for="connection1">
                 <input type="radio" name="connection" value="yes" id="connection1"/>
                 <span className="text">Yes</span>
                 <span className="shape connectionShape"></span>
               </label>
           
-              <label class="radioLabel" onChange={this.setConnection.bind(this)} class="sometimes connection"for="connection2">
+              <label class="radioLabel" onChange={this.setRadio.bind(this)} class="sometimes connection"for="connection2">
                   <input type="radio" name="connection" value="sometimes" id="connection2"/>
                   <span className="textLong">Sometimes</span>
                   <span className="shape connectionShape"></span>
               </label>
             
-              <label class="radioLabel" onChange={this.setConnection.bind(this)} class="no connection" for="connection3">
+              <label class="radioLabel" onChange={this.setRadio.bind(this)} class="no connection" for="connection3">
                   <input type="radio" name="connection" value="no" id="connection3" active/>
                   <span className="text">No</span>
                   <span className="shape connectionShape"></span>
@@ -110,19 +139,19 @@ export default class RadioForm extends Component {
          
               <div id="heading-growth">Am I gaining skills?</div>
               
-              <label class="radioLabel" onChange={this.setGrowth.bind(this)} class="yes growth" for="growth1">
+              <label class="radioLabel" onChange={this.setRadio.bind(this)} class="yes growth" for="growth1">
                 <input type="radio" name="growth" value="yes" id="growth1"/>
                 <span className="text">Yes</span>
                 <span className="shape growthShape"></span>
               </label>
           
-              <label class="radioLabel" onChange={this.setGrowth.bind(this)} class="sometimes growth"for="growth2">
+              <label class="radioLabel" onChange={this.setRadio.bind(this)} class="sometimes growth"for="growth2">
                   <input type="radio" name="growth" value="sometimes" id="growth2"/>
                   <span className="textLong">Sometimes</span>
                   <span className="shape growthShape"></span>
               </label>
             
-              <label class="radioLabel" onChange={this.setGrowth.bind(this)} class="no growth" for="growth3">
+              <label class="radioLabel" onChange={this.setRadio.bind(this)} class="no growth" for="growth3">
                   <input type="radio" name="growth" value="no" id="growth3" active/>
                   <span className="text">No</span>
                   <span className="shape growthShape"></span>

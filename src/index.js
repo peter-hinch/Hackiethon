@@ -35,7 +35,9 @@ ReactDOM.render(
       <Route exact path='/' component={Splash} />
       <Route exact path='/home' component={Splash} />
       <Route exact path='/evaluate' component={EvaluatePage} />
-      <Route exact path='/signup' component={SignUp} />
+      <Route exact path='/signup' component={SignUp}>
+
+      </Route>
       <Route exact path='/login' component={LogIn} />
       <Route exact path='/sliders' component={SliderForm} />
       {/* <Route exact path='/SliderForm' component={SliderForm} /> */}
