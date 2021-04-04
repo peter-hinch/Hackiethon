@@ -1,19 +1,25 @@
-#sliderContainer {
+#main__body {
+  height: 100vh;
   background-color: #f9f3de;
+}
+#sliderContainer {
   display: grid;
-  grid-template-columns: 2fr;
+  grid-template-columns: 1fr;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  width: 700px;
-  margin: 100px;
+  text-align: center;
 }
 
-form {
-  display: flex;
-  justify-content: center;
+#sliderform {
   background-color: #f9f3de;
-  text-align: center;
+  display: grid;
+
+  justify-items: center;
+}
+
+* {
+  margin: auto;
 }
 
 input[type="range"] {
@@ -22,6 +28,7 @@ input[type="range"] {
   margin: 50px;
   margin-top: 10px;
   width: 500px;
+
   background-color: #f9f3de;
 }
 input[type="range"]:focus {
@@ -285,7 +292,7 @@ input[type="range"]#stress:focus::-ms-fill-upper {
 #submitButton {
   color: #f6fff0 !important;
   width: 200px;
-  margin: AUTO;
+  margin: auto;
   box-sizing: content-box;
   cursor: pointer;
   justify-content: center;
@@ -293,7 +300,7 @@ input[type="range"]#stress:focus::-ms-fill-upper {
   text-decoration: none;
   padding: 10px 20px;
   width: 10%;
-  height: 50%;
+  height: 30%;
   border: none;
   outline: none;
   background-color: #4267a1;

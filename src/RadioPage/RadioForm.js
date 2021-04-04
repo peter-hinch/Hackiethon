@@ -54,26 +54,26 @@ export default class RadioForm extends Component {
   render() {
   
     return (
-      <form onSubmit={this.handleSubmit}>
+      <form onSubmit={this.handleSubmit} id = 'radioform'>
         <div className="row">
           <div></div>
           <div className="column">
          
               <div id="heading-autonomy">Do I have autonomy?</div>
               
-              <label onChange={this.setAutonomy.bind(this)} class="yes autonomy" for="autonomy1">
+              <label onChange={this.setAutonomy.bind(this)} class="yes autonomy  radiolabel" for="autonomy1">
                 <input type="radio" name="autonomy" value="yes" id="autonomy1"/>
                 <span className="text">Yes</span>
                 <span className="shape autonomyShape"></span>
               </label>
           
-              <label onChange={this.setAutonomy.bind(this)} class="sometimes autonomy"for="autonomy2">
+              <label onChange={this.setAutonomy.bind(this)} class="sometimes autonomy radiolabel"for="autonomy2">
                   <input type="radio" name="autonomy" value="sometimes" id="autonomy2"/>
                   <span className="textLong">Sometimes</span>
                   <span className="shape autonomyShape"></span>
               </label>
             
-              <label onChange={this.setAutonomy.bind(this)} class="no autonomy" for="autonomy3">
+              <label onChange={this.setAutonomy.bind(this)} class="no autonomy radiolabel" for="autonomy3">
                   <input type="radio" name="autonomy" value="no" id="autonomy3" active/>
                   <span className="text">No</span>
                   <span className="shape autonomyShape"></span>

@@ -31,25 +31,27 @@ export default class SliderForm extends Component {
   render() {
   
     return (
-      <form onSubmit={this.handleSubmit}>
-        <div id="sliderContainer">
+      <div id = 'main__body'>
+        <form onSubmit={this.handleSubmit} id = 'sliderform'>
+          <div id="sliderContainer">
+            <label>
+              Satisfaction: <br/>  
+            <input id="satisfaction" name='satisfaction' type="range" value={this.state.value} onChange={this.handleChange} />
+          </label>
+
           <label>
-            Satisfaction: <br/>  
-          <input id="satisfaction" name='satisfaction' type="range" value={this.state.value} onChange={this.handleChange} />
-        </label>
+          <br/>Stress levels: <br/>
+            <input id="stress" name='stress' type="range" value={this.state.value} onChange={this.handleChange} />
+          </label>
 
-        <label>
-        <br/>Stress levels: <br/>
-           <input id="stress" name='stress' type="range" value={this.state.value} onChange={this.handleChange} />
-        </label>
-
-        <label>
-        <br/>Physical Health: <br/>
-          <input id="health" name='health' type="range" value={this.state.value} onChange={this.handleChange} />
-        </label>
-        <input id="submitButton" type="submit" value="Submit" />
+          <label>
+          <br/>Physical Health: <br/>
+            <input id="health" name='health' type="range" value={this.state.value} onChange={this.handleChange} />
+          </label>
+          <input id="submitButton" type="submit" value="Submit" />
+          </div>
+          </form>
         </div>
-      </form>
     );
   }
 }
