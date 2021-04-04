@@ -55,7 +55,7 @@ class SignUp extends Component {
         <div id ='main__signup_con'>
           <div className="signup__image--container">
                         <img src={signup} alt="pic" id ="signup__img"></img>
-                    </div>
+          </div>
           <form onSubmit={this.handleSubmit} id='signin_form'>
             <h1 id = 'sign_up_title'>Sign up</h1>
             <label>First Name: <input name="firstname" id="firstname" type="text"className='form_input_si' required onChange={this.handleChange} value={this.state.firstname} /></label><br />
