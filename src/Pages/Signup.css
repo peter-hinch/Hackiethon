@@ -59,7 +59,7 @@
   color: white !important;
   background: #7adaf6;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1260px) {
   #main__signup_con {
     display: grid;
     grid-template-columns: auto;
