@@ -54,7 +54,7 @@ export default class RadioForm extends Component {
   render() {
   
     return (
-      <form onSubmit={this.handleSubmit}>
+      <form id="radio" onSubmit={this.handleSubmit}>
         <div className="row">
           <div></div>
           <div className="column">

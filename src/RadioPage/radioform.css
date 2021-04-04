@@ -97,7 +97,7 @@ label.connection {
     align-content: center;       
   }
 
-  form {
+  form#radio {
     display: grid;
     grid-template-rows: 250px 100px;
     justify-items: center;
