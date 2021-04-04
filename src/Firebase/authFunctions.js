@@ -10,8 +10,13 @@ class AuthFunctions extends firebase {
           last: lastname
         },
         email: email,
-        role: "employee"
-      });
+        role: "employee",
+        assessment: {
+          val1: 50,
+          val2: 50
+        }
+      },
+      );
     })
     .catch(this.debugError);
   }
