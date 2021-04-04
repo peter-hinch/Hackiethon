@@ -8,6 +8,7 @@ import Navbar from './Components/Navbar';
 import Splash from './Pages/Splash';
 import SignUp from './Pages/SignUp';
 import LogIn from './Pages/LogIn';
+import EvaluatePage from './Pages/EvaluatePage';
 
 
 ReactDOM.render(
@@ -16,6 +17,7 @@ ReactDOM.render(
     <HashRouter>
       <Route exact path='/' component={Splash} />
       <Route exact path='/home' component={Splash} />
+      <Route exact path='/evaluate' component={EvaluatePage} />
       <Route exact path='/signup' component={SignUp} />
       <Route exact path='/login' component={LogIn} />
     </HashRouter>
