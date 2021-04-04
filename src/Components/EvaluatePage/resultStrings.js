@@ -59,11 +59,14 @@ const evalStrings = [
 
     "Find the drive to strive in work and study.",
 
-    "You feel comfortable in your responsibilities for working and studying.",
+    "You feel comfortable in your responsibilities for working and studying. Most issues " +
+    "faced within your efforts are easily managed. Keep up the good work!",
 
-    "You're facing slight issues in staying focused in work and study.",
+    "Your productivity is neutral and balanced. There's small improvements to make to " + 
+    "increase work output.",
 
-    "You feel a strong issue in working or studying.",
+    "You feel a strong issue in working or studying. Finding a motivation or solution " + 
+    "to work efficiently can help resolve issues in work productivity.",
 
     // 20 - 24: Connection title and descriptions
     
@@ -85,9 +88,9 @@ const evalStrings = [
     "Learn and achieve more in your practice.",
 
     "You feel like you are advancing in your field, and you are learning and " + 
-    "experiencing new things rapidly and quickly.",
+    "experiencing new things rapidly and quickly. Great work!",
 
-    "You feel like you are in a steady position in educational and practical experiences. ",
+    "You feel like you are in a steady position in educational and practical experiences.",
     
     "You feel like you are at a standstill in education and experience. You may not be " + 
     "experiencing new things, or you are stuck with where you are in your learning journey.",
