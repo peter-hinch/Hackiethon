@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import ByeBye from '../Components/ByeBye';
 
-class Splash extends Component {
+class Final extends Component {
   constructor(props) {
     super(props)
     this.state = this.props;
@@ -9,7 +9,7 @@ class Splash extends Component {
   render() { 
     return ( 
       <React.Fragment>
-        <Bye />
+        <ByeBye />
       </React.Fragment>
       );
   }

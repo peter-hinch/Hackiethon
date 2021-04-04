@@ -3,13 +3,11 @@ import campfire from './campfire.svg';
 import './HomeStyle.css';
 import { HashRouter, NavLink } from "react-router-dom";
 
-function Bye(props) {
+function ByeBye(props) {
     return (
     
             <div className="main">
                 <div className="main__container">
-                    
-
                     <div className="main__content"> 
                         <h1>Stay Hydrated</h1>
                 </div>
@@ -22,4 +20,4 @@ function Bye(props) {
 }
 
 
-export default Bye;
+export default ByeBye;
