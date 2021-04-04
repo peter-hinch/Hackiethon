@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { Redirect } from 'react-router-dom';
 import { authFunctions } from '../Firebase';
+import './Signup.css'
+import signup from './signin.svg';
 
 class SignUp extends Component {
   constructor(props) {
@@ -30,23 +32,39 @@ class SignUp extends Component {
     this.setState({login: true})
   }
 
+
+
   render() { 
     if (this.state.login) {
-      return <Redirect to='./login' />
+      return <Redirect to={{
+        pathname: '/login',
+        state: { user: {firstname: this.state.firstname,
+                        lastname: this.state.lastname} }
+    }} />
     }
     if(this.state.success) {
-      return <Redirect to="./home" />
+      return <Redirect to={{
+        pathname: '/sliders',
+        state: { user: {firstname: this.state.firstname,
+          lastname: this.state.lastname} }
+         }
+    } />
     }
     return ( 
       <React.Fragment>
-        <h1>Sign up</h1>
-        <form onSubmit={this.handleSubmit}>
-          <label>First Name: <input name="firstname" id="firstname" type="text" required onChange={this.handleChange} value={this.state.firstname} /></label><br />
-          <label>Last Name: <input name="lastname" id="lastname" type="text" required onChange={this.handleChange} value={this.state.lastname} /></label><br />
-          <label>Email: <input name="email" id="email" type="text" required onChange={this.handleChange} value={this.state.email} /></label><br />
-          <label>Password: <input name="password" id="password" type="password" required onChange={this.handleChange} /></label><br />
-          <button type="submit">Log In</button>
-        </form>
+        <div id ='main__signup_con'>
+          <div className="signup__image--container">
+                        <img src={signup} alt="pic" id ="signup__img"></img>
+          </div>
+          <form onSubmit={this.handleSubmit} id='signin_form'>
+            <h1 id = 'sign_up_title'>Sign up</h1>
+            <label>First Name: <input name="firstname" id="firstname" type="text"className='form_input_si' required onChange={this.handleChange} value={this.state.firstname} /></label><br />
+            <label>Last Name: <input name="lastname" id="lastname" type="text"className='form_input_si' required onChange={this.handleChange} value={this.state.lastname} /></label><br />
+            <label>Email: <input name="email" id="email" type="text"className='form_input_si' required onChange={this.handleChange} value={this.state.email} /></label><br />
+            <label>Password: <input name="password" id="password" type="password" className='form_input_si'required onChange={this.handleChange} /></label><br />
+            <button type="submit" id = "signin_submit">Sign Up</button>
+          </form>
+        </div>
       </React.Fragment>
     );
   }

@@ -1,28 +1,40 @@
 const evalStrings = [
     
-    // 0 - 4: Satisfaction title and descriptions
-    
+    // 0 - 7: Satisfaction title and descriptions
+
+    // title
     "Satisfaction",
 
+    // description
     "Understand how satisfied you are with where you are and how you feel.",
 
+    // good result
     "You are currently satisfied with where you are right now. There are very minimal " + 
     "circumstances that are negatively impacting your happiness. Great job!",
 
+    // neutral result
     "You feel a slight concern with where you are right now. There are some things in " + 
     "life that you are finding to be slightly challenging. You have the integrity to " + 
     "find the solutions to your problem.",
 
+    // bad result
     "You are feeling a great discomfort in your current situation in life. There are " + 
     "some situations that need to be changed in order to find satisfaction with what " + 
     "you are currently doing. With some simple beginning steps, you can move yourself " + 
     "in the right direction and work your way towards satisfaction.",
 
-    // 5 - 9: Stress title and descriptions
+    // todo
+    " - Take a break when you can. Allow yourself some time to recover.",
+    " - Look towards solutions for other problems you may be facing. Working on " + 
+       "solutions for your problems can improve your overall satisfaction.",
+    " - Maintain the things around you that keep you satisfied, and prepare for " + 
+       "problems in the future so you can easily account for them.",
+
+    // 8 - 15: Stress title and descriptions
     
     "Stress",
 
-    "Manage your stress to set it aside or remove it, and improve your comfort.",
+    "Know what affects you negatively, and solve it.",
 
     "You are currently satisfied with your situation around you. There are no stresses " + 
     "in your life, or any potential worries or inconveniences are not affecting you " + 
@@ -36,7 +48,14 @@ const evalStrings = [
     "alleviate that stress so it doesn't affect you. Once you take the steps to calm " + 
     "yourself, you will feel better.",
 
-    // 10 - 14: Physical title and descriptions
+    " - Take some moments to relax and calm down. Focus on deep breaths.",
+    " - Understand what you are facing and look towards a constructive solution for " + 
+       "problems that are causing you stress.",
+    " - Prepare for future inconveniences that can lead to stress. Understand what " + 
+       "could potentially cause you stress in the future, and consider a plan that " +
+       "results in a long term benefit.",
+
+    // 16 - 23: Physical title and descriptions
     
     "Physical",
 
@@ -53,7 +72,12 @@ const evalStrings = [
     "or self-esteem. With the right steps to take, you can improve your mental and " + 
     "physical qualities around your physiological state.",
 
-    // 15 - 19: Autonomy title and descriptions
+    " - Make sure you are eating properly. Stick as close to a balanced diet as you can.",
+    " - Create a small exercise routine. Work on a balance of muscle building and cardio.",
+    " - Create fitness goals that exceed your current fitness state, and strive for it " +
+       "as best you can.",
+
+    // 24 - 31: Autonomy title and descriptions
     
     "Autonomy",
 
@@ -68,7 +92,14 @@ const evalStrings = [
     "You feel a strong issue in working or studying. Finding a motivation or solution " + 
     "to work efficiently can help resolve issues in work productivity.",
 
-    // 20 - 24: Connection title and descriptions
+    " - Take some time off what you are working on and relax.",
+    " - Break down overwhelming tasks into smaller parts. Find accomplishment with " + 
+       "each small task completed as you work towards completing the one large " + 
+       "unified objective.",
+    " - Solidify your study/work plan. Organise your working times and efforts, and " + 
+       "reorganise it for a perfect balance of workload and effort.",
+
+    // 32 - 39: Connection title and descriptions
     
     "Connection",
 
@@ -76,12 +107,20 @@ const evalStrings = [
 
     "You feel a strong connection with many, if not everyone around you.",
 
-    "You feel a balance in your connections, and have found a connection with a fraction " + 
-    "of those around you.",
+    "You feel okay with those around you, but are facing slight issues regarding looking." + 
+    "for more connections, or you are concerned by the integrity of your current relations.",
 
     "You feel dissatisfied with the connections around you.",
 
-    // 25 - 29: Education title and descriptions
+    " - Understand that it is okay to feel isolated or dissatisfied with your social " + 
+       "relations. Many people are alone or face issues with their friends and family.",
+    " - Look towards resolving a conflict between your relations, or look to start " + 
+       "healthy conversations with new people.",
+    " - Solidify your relationships with other people by listening to their problems. " + 
+       "most people can't solve their issues alone, and giving them support can " + 
+       "strengthen your connections with those around you.",
+
+    // 40 - 47: Education title and descriptions
     
     "Experience & Education",
 
@@ -90,10 +129,19 @@ const evalStrings = [
     "You feel like you are advancing in your field, and you are learning and " + 
     "experiencing new things rapidly and quickly. Great work!",
 
-    "You feel like you are in a steady position in educational and practical experiences.",
+    "You feel like you are in a steady position in educational and practical experiences, " + 
+    "but some fields can be improved.",
     
     "You feel like you are at a standstill in education and experience. You may not be " + 
     "experiencing new things, or you are stuck with where you are in your learning journey.",
+
+    " - Look for help or assistance from others in the field. Look online for solutions, " + 
+       "or ask your teacher or coworker that you report to.",
+    " - Work on understanding the difficult areas of your field. What problems do you " + 
+       "normally get stuck on? Take your time as you work towards the solutions.",
+    " - Look for new things to find in your field of expertise, such as researching " + 
+       "new topics you're unfamiliar with, or practicing something you don't have a " + 
+       "lot of experience in.",
 
 ];
 

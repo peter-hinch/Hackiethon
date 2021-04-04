@@ -4,7 +4,7 @@
 }
 
 .main {
-  background-color: var(--color2);
+  background-color: #f9f3de;
 }
 .main__container {
   display: grid;
@@ -13,7 +13,7 @@
   justify-self: center;
   margin: 0 auto;
   height: 91.7vh;
-  background-color: var(--color2);
+  background-color: #f9f3de;
   z-index: 1;
   width: 100%;
   max-width: 1300px;

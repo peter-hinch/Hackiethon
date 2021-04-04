@@ -1,21 +1,18 @@
 import React, { Component } from 'react';
-import Home from '../Components/Home';
+import ByeBye from '../Components/ByeBye';
 
-class Splash extends Component {
+class Final extends Component {
   constructor(props) {
     super(props)
     this.state = this.props;
-    console.log(this.props.location.state);
   }
-
   render() { 
-    
     return ( 
       <React.Fragment>
-        <Home />
+        <ByeBye />
       </React.Fragment>
       );
   }
 }
  
-export default Splash;
+export default Final;

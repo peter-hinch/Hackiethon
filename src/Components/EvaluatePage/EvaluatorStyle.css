@@ -1,0 +1,23 @@
+#main_evaluate_body {
+  width: 60%;
+  margin: auto;
+  line-height: 40px;
+}
+#eval_container1 {
+  padding-top: 2em;
+}
+#todo_title {
+  color: #141755;
+}
+#eval_title {
+  color: #141755;
+}
+.todo {
+  color: #1b978b;
+}
+#eval_desc {
+  color: #141755;
+}
+#eval_result {
+  color: #1b978b;
+}

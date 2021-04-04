@@ -138,7 +138,7 @@
   }
 
   .navbar__menu.active {
-    background: #181717;
+    background: #f9f3de;
     top: 100%;
     opacity: 1;
     transition: all 0.5s ease;
@@ -161,7 +161,7 @@
   }
   .navbar__links {
     text-align: center;
-    padding: 2rem;
+    padding: 1rem;
     width: 100%;
     height: auto;
     display: table;
@@ -182,7 +182,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 80%;
+    width: 150px;
     height: 60px;
     margin-top: 10px;
   }
@@ -190,6 +190,7 @@
   .navbar__toggle .bar {
     display: block;
     cursor: pointer;
+    color: var(--color2);
   }
 
   #mobile-menu.is-active .bar:nth-child(2) {
