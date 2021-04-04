@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { HashRouter, NavLink } from "react-router-dom";
 import './NavStyle.css';
 
 const menu = document.querySelector('#mobile-menu'); //targets the spans
@@ -23,20 +24,22 @@ const Navbar = () => {
                 <span className="bar"></span>
                 <span className="bar"></span>
             </div>
+            <HashRouter>
             <ul className="navbar__menu">
                 <li className="navbar__item">
-                    <a href="./home" className="navbar__links">Home</a>
+                    <NavLink to="/home" className="navbar__links">Home</ NavLink>
                 </li>
                 <li className="navbar__item">
-                    <a href="./" class="navbar__links">Employee</a>
+                    <NavLink to="/" class="navbar__links">Employee</ NavLink>
                 </li>
                 <li className="navbar__item">
-                        <a href="./" className="navbar__links">Employer</a>
+                    <NavLink to="/" className="navbar__links">Employer</ NavLink>
                 </li>
                 <li className="navbar__btn">
-                    <a href="./SignUp" className="button" id = "signup__btn">Sign In</a>
+                    <NavLink to="/signup" className="button" id = "signup__btn">Sign In</ NavLink>
                 </li>
             </ul>
+            </HashRouter>
         </div>
     </nav>
     )
