@@ -41,7 +41,7 @@ export default class RadioForm extends Component {
     // alert(`Satisfaction: ${this.state.satisfaction}.
     // Growth: ${this.state.growth}
     // Stress levels: ${this.state.stress}`);
-
+  
     const { autonomy, connection, growth } = this.state;
     console.log(`autonomy = ${autonomy}
     connection = ${connection}
