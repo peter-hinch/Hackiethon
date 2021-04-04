@@ -56,3 +56,24 @@
   color: white !important;
   background: #7adaf6;
 }
+@media screen and (max-width: 768px) {
+  #main__signup_con {
+    display: grid;
+    grid-template-columns: auto;
+    padding-top: 10px;
+    width: 100%;
+    height: 100vh;
+  }
+  #signin_form {
+    text-align: center;
+    padding-top: 0px;
+    margin-top: 0px;
+  }
+  #signup__img {
+    width: 60%;
+    height: 60%;
+    align-items: center;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+  }
+}
