@@ -30,12 +30,23 @@ class SignUp extends Component {
     this.setState({login: true})
   }
 
+
+
   render() { 
     if (this.state.login) {
-      return <Redirect to='./login' />
+      return <Redirect to={{
+        pathname: '/login',
+        state: { user: {firstname: this.state.firstname,
+                        lastname: this.state.lastname} }
+    }} />
     }
     if(this.state.success) {
-      return <Redirect to="./home" />
+      return <Redirect to={{
+        pathname: '/sliders',
+        state: { user: {firstname: this.state.firstname,
+          lastname: this.state.lastname} }
+         }
+    } />
     }
     return ( 
       <React.Fragment>
